@@ -33,7 +33,7 @@ if st.button("Predict risk", type="primary"):
         "AVG_BILL": avg_bill, "AVG_PAY": avg_pay,
     }])
     prob = float(model.predict_proba(row)[0, 1])
-    st.metric("Default probability", f"{prob:.1%}")
+    st.metric("Risk Score", f"{prob:.1%}")
     st.progress(min(prob, 1.0))
     if prob >= 0.6:
         st.error("High risk")
