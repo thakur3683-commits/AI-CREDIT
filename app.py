@@ -14,7 +14,7 @@ edu = c2.selectbox("Education", ["Graduate school", "University", "High school",
 mar = c1.selectbox("Marital status", ["Married", "Single", "Other"])
 
 st.subheader("Repayment status")
-st.caption("-1 = paid on time, 0 = revolving credit, 1-8 = months of delay")
+st.caption("-2 = no value, -1 = paid on time, 0 = revolving credit, 1-8 = months of delay")
 p1, p2, p3 = st.columns(3)
 pay1 = p1.slider("Last month", -2, 8, 0)
 pay2 = p2.slider("2 months ago", -2, 8, 0)
