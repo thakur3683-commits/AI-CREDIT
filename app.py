@@ -29,7 +29,7 @@ if st.button("Predict risk", type="primary"):
         "SEX": 1 if sex == "Male" else 2,
         "EDUCATION": ["Graduate school", "University", "High school", "Other"].index(edu) + 1,
         "MARRIAGE": ["Married", "Single", "Other"].index(mar) + 1,
-        "AGE": age, "PAY_0": pay0, "PAY_2": pay2, "PAY_3": pay3,
+        "AGE": age, "PAY_1": pay1, "PAY_2": pay2, "PAY_3": pay3,
         "AVG_BILL": avg_bill, "AVG_PAY": avg_pay,
     }])
     prob = float(model.predict_proba(row)[0, 1])
